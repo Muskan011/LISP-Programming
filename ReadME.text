@@ -1,0 +1,19 @@
+Part 1:
+Nth-fib : The function recursively finds the value of the nth term by adding the (n -1)th term and (n-2)th term.
+Fib: I made a helper function that takes 4 inputs: previous 2 elements, n, and list. I keep adding to the list in reverse order until n  = 0 and as soon as I have the list of all n elements I call reverse on the list.
+Fib-lt: I made a call to a helper function with 4 inputs, previous 2 values, n, and a list. The helper function keeps recursively adding to the list as long as prev2 is strictly less than n. Finally, when prev2 is greater than or equal n I returned the reverse of the list.
+
+Part 2:
+Present: Is a recursive function that checks if the pattern contains any special symbols.
+Spec-ex: is a recursive function that handles the case where the first element of the pattern is !. This function removes atoms from the assertion one by one until the atom matches the atom in the pattern or else returns nil.
+Helper: Is a recursive function that compares the first letter of the pattern with special characters and first letter of assertion and calls itself to handle *, spec-ex to handle !, and itself to handle matching 1st letters. The base cases are when both pattern and assertion become empty(returns true) or when  assertion becomes empty(returns nil).
+Match: Is a recursive function that checks if the pattern and assertion are equal returns true or else if the pattern contains any special symbols it calls helper or else it returns false.
+ 
+Sources used:
+
+https://cseweb.ucsd.edu/classes/fa02/cse150/lectures-pdf/lec1.pdf
+equal & reverse functions: https://cseweb.ucsd.edu/classes/fa02/cse150/lectures-pdf/lec2.pdf
+cond func: https://cseweb.ucsd.edu/classes/fa02/cse150/lectures-pdf/lec3.pdf
+https://cseweb.ucsd.edu/classes/fa02/cse150/lectures-pdf/lec4.pdf
+https://gigamonkeys.com/book/numbers-characters-and-strings.html
+car and cdr: https://gigamonkeys.com/book/they-called-it-lisp-for-a-reason-list-processing.html
